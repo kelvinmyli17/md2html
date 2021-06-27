@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cstring>
 #include <iostream>
+#include <regex>
 #include <sstream>
 #include <fstream>
 #include <string>
@@ -9,13 +10,13 @@
 using namespace std;
 
 int main() {
-  string mdfile_path = "./input.md";
+  string mdfile = "./input.md";
 
   ofstream htmlfile; // 输出
   htmlfile.open("target.html", ios::out); // 最后要保存为 html 文件
 
   if (htmlfile.is_open()) {
-    htmlfile << get_string(mdfile_path);
+    htmlfile << convert(mdfile);
     htmlfile.close();
   }
 }
