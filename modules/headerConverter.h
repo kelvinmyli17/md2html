@@ -7,7 +7,7 @@
  * HTML: <h1>text</h1>
  *
  * 所以我的想法是首先要判断是否存在标题 (用 regex_match)
- * 然后获取 '#' 的个数, 记为 count
+ * 然后获取 '#' 的个数, 记为 hCount 
  */
 using namespace std;
 class HeaderConverter {
